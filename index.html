@@ -109,6 +109,42 @@
   transform: scale(1.1);
 }
 
+/* my code  */
+
+/* 1) Keep whole photo visible and centered */
+.slider-item .one-third.img{
+  position: relative;
+  background-color:#000;        /* black backdrop */
+  background-repeat:no-repeat;
+  background-size:contain;      /* never crop */
+  background-position:center 18%;/* lift a bit; adjust 10–25% to taste */
+  min-height:520px;
+  border-radius:12px;
+  overflow:hidden;              /* for the fallback overlay below */
+}
+
+/* 2) Smoothly merge edges into black (primary method: CSS mask) */
+.slider-item .one-third.img{
+  /* Bigger % = softer fade; 50% = center height */
+  -webkit-mask-image: radial-gradient(120% 120% at 50% 45%, #000 60%, transparent 100%);
+  mask-image: radial-gradient(120% 120% at 50% 45%, #000 60%, transparent 100%);
+}
+
+/* 3) Fallback for older browsers (adds a subtle black vignette at edges) */
+.slider-item .one-third.img::after{
+  content:"";
+  position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(120% 120% at 50% 45%, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%),
+    linear-gradient(to bottom, rgba(0,0,0,0) 75%, rgba(0,0,0,.9) 100%);
+}
+@media (max-width: 991.98px){
+  .slider-item .one-third.img{ min-height:420px; background-position:center 22%; }
+}
+
+
+
+
 
 </style>
 
@@ -141,7 +177,7 @@
 	      	<div class="overlay"></div>
 	         <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/round_cornor.jpg);">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/ai_image.png);">
 	          	 <div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
@@ -198,6 +234,18 @@
 	      </div>
 		</div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+	
 
 
 
