@@ -38,11 +38,11 @@
 
   // ---------- cycling role text ----------
   const roles = [
-    "Building LLM-powered apps",
-    "Designing RAG systems",
-    "Engineering ML pipelines",
-    "Deploying AI agents with CrewAI",
-    "Turning data into decisions"
+    "Building production RAG systems",
+    "Shipping multi-agent workflows",
+    "Evaluating LLMs with DeepEval & RAGAS",
+    "Deploying AI to AWS with CI/CD",
+    "Building WhatsApp AI bots"
   ];
   const roleEl = document.getElementById('roleText');
   let roleIndex = 0, charIndex = 0, deleting = false;
@@ -66,7 +66,7 @@
   const canvas = document.getElementById('hero-canvas');
   const ctx = canvas.getContext('2d');
   const heroSection = document.getElementById('home');
-  const labels = ['Python','LangChain','RAG','CrewAI','LLM','AWS','ML','Ollama','MySQL','Deep Learning'];
+  const labels = ['Python','LangGraph','RAG','CrewAI','LLM','AWS','Qdrant','FastAPI','DeepEval','Agents'];
   let nodes = [];
   let mouse = { x: null, y: null };
   let dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -91,7 +91,7 @@
         vx: (Math.random()-0.5)*0.25,
         vy: (Math.random()-0.5)*0.25,
         r: Math.random()*1.6 + 1.4,
-        label: i < labels.length ? labels[i] : null
+        label: (w >= 700 && i < labels.length) ? labels[i] : null
       });
     }
   }
