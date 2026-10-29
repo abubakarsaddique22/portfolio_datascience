@@ -1,10 +1,10 @@
-# Abubakar Saddique — Portfolio
+# Abubakar Saddique | Portfolio
 
 Personal portfolio of Abubakar Saddique, AI Engineer (Production RAG · AI Agents · LLMOps), Lahore, Pakistan.
 
 **Live:** https://abubakarsaddique22.github.io/portfolio_datascience/
 
-Plain HTML, CSS and JavaScript — no build step. Deploys straight to GitHub Pages from the `main` branch.
+Plain HTML, CSS and JavaScript with no build step. Deploys straight to GitHub Pages from the `main` branch.
 
 ## Structure
 
